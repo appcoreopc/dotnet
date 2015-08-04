@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockTestAppTest", "MockTestApp\MockTestAppTest.csproj", "{2158458C-59EB-4E66-99C5-E2B693C125C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationLogger", "ApplicationLogger\ApplicationLogger.csproj", "{55FCE262-DC2B-4427-A7D0-71248961C3ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2158458C-59EB-4E66-99C5-E2B693C125C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2158458C-59EB-4E66-99C5-E2B693C125C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2158458C-59EB-4E66-99C5-E2B693C125C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2158458C-59EB-4E66-99C5-E2B693C125C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55FCE262-DC2B-4427-A7D0-71248961C3ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FCE262-DC2B-4427-A7D0-71248961C3ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FCE262-DC2B-4427-A7D0-71248961C3ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FCE262-DC2B-4427-A7D0-71248961C3ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

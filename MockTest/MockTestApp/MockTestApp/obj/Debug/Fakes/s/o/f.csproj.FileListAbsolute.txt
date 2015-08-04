@@ -1,0 +1,11 @@
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\s\b\System.4.0.0.0.Fakes.xml
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\s\b\System.4.0.0.0.Fakes.dll
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\s\b\System.4.0.0.0.Fakes.pdb
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\s\b\ApplicationLogger.dll
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\s\b\Microsoft.QualityTools.Testing.Fakes.dll
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\s\b\NSubstitute.dll
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\s\b\ApplicationLogger.pdb
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\s\b\NSubstitute.xml
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\s\o\f.csprojResolveAssemblyReference.cache
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\s\o\System.4.0.0.0.Fakes.dll
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\s\o\System.4.0.0.0.Fakes.pdb

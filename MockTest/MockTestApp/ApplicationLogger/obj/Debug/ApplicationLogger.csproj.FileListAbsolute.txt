@@ -1,0 +1,4 @@
+D:\test\net\netApp\MockTest\MockTestApp\ApplicationLogger\bin\Debug\ApplicationLogger.dll
+D:\test\net\netApp\MockTest\MockTestApp\ApplicationLogger\bin\Debug\ApplicationLogger.pdb
+D:\test\net\netApp\MockTest\MockTestApp\ApplicationLogger\obj\Debug\ApplicationLogger.dll
+D:\test\net\netApp\MockTest\MockTestApp\ApplicationLogger\obj\Debug\ApplicationLogger.pdb

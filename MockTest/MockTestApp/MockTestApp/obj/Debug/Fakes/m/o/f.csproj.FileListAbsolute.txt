@@ -1,0 +1,11 @@
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\m\b\mscorlib.4.0.0.0.Fakes.xml
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\m\b\mscorlib.4.0.0.0.Fakes.dll
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\m\b\mscorlib.4.0.0.0.Fakes.pdb
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\m\b\ApplicationLogger.dll
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\m\b\Microsoft.QualityTools.Testing.Fakes.dll
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\m\b\NSubstitute.dll
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\m\b\ApplicationLogger.pdb
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\m\b\NSubstitute.xml
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\m\o\f.csprojResolveAssemblyReference.cache
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\m\o\mscorlib.4.0.0.0.Fakes.dll
+D:\test\net\netApp\MockTest\MockTestApp\MockTestApp\obj\Debug\Fakes\m\o\mscorlib.4.0.0.0.Fakes.pdb
