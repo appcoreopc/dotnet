@@ -35,60 +35,58 @@ namespace AngularJSAuthentication.API
             IdentityUser user = await _userManager.FindAsync(userName, password);
             return user;
         }
+        
+        public Client FindClient(string clientId)
+        {
+            var client = _ctx.Clients.Find(clientId);
 
+            return client;
+        }
 
-        //public Client FindClient(string clientId)
-        //{
-        //    var client = _ctx.Clients.Find(clientId);
+        public async Task<bool> AddRefreshToken(RefreshToken token)
+        {
 
-        //    return client;
-        //}
+            var existingToken = _ctx.RefreshTokens.Where(r => r.Subject == token.Subject && r.ClientId == token.ClientId).SingleOrDefault();
 
-        //public async Task<bool> AddRefreshToken(RefreshToken token)
-        //{
+            if (existingToken != null)
+            {
+                var result = await RemoveRefreshToken(existingToken);
+            }
 
-        //    var existingToken = _ctx.RefreshTokens.Where(r => r.Subject == token.Subject && r.ClientId == token.ClientId).SingleOrDefault();
+            _ctx.RefreshTokens.Add(token);
 
-        //    if (existingToken != null)
-        //    {
-        //        var result = await RemoveRefreshToken(existingToken);
-        //    }
+            return await _ctx.SaveChangesAsync() > 0;
+        }
 
-        //    _ctx.RefreshTokens.Add(token);
+        public async Task<bool> RemoveRefreshToken(string refreshTokenId)
+        {
+            var refreshToken = await _ctx.RefreshTokens.FindAsync(refreshTokenId);
 
-        //    return await _ctx.SaveChangesAsync() > 0;
-        //}
+            if (refreshToken != null)
+            {
+                _ctx.RefreshTokens.Remove(refreshToken);
+                return await _ctx.SaveChangesAsync() > 0;
+            }
 
-        //public async Task<bool> RemoveRefreshToken(string refreshTokenId)
-        //{
-        //    var refreshToken = await _ctx.RefreshTokens.FindAsync(refreshTokenId);
+            return false;
+        }
 
-        //    if (refreshToken != null)
-        //    {
-        //        _ctx.RefreshTokens.Remove(refreshToken);
-        //        return await _ctx.SaveChangesAsync() > 0;
-        //    }
+        public async Task<bool> RemoveRefreshToken(RefreshToken refreshToken)
+        {
+            _ctx.RefreshTokens.Remove(refreshToken);
+            return await _ctx.SaveChangesAsync() > 0;
+        }
 
-        //    return false;
-        //}
+        public async Task<RefreshToken> FindRefreshToken(string refreshTokenId)
+        {
+            var refreshToken = await _ctx.RefreshTokens.FindAsync(refreshTokenId);
 
-        //public async Task<bool> RemoveRefreshToken(RefreshToken refreshToken)
-        //{
-        //    _ctx.RefreshTokens.Remove(refreshToken);
-        //    return await _ctx.SaveChangesAsync() > 0;
-        //}
-
-        //public async Task<RefreshToken> FindRefreshToken(string refreshTokenId)
-        //{
-        //    var refreshToken = await _ctx.RefreshTokens.FindAsync(refreshTokenId);
-
-        //    return refreshToken;
-        //}
-
-        //public List<RefreshToken> GetAllRefreshTokens()
-        //{
-        //    return _ctx.RefreshTokens.ToList();
-        //}
+            return refreshToken;
+        }
+        public List<RefreshToken> GetAllRefreshTokens()
+        {
+            return _ctx.RefreshTokens.ToList();
+        }
 
         public void Dispose()
         {

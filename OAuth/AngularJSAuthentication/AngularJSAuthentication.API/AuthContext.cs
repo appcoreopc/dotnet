@@ -11,8 +11,8 @@ namespace AngularJSAuthentication.API
         {
 
         }
-        //public DbSet<Client> Clients { get; set; }
-        //public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
     }   
 }
