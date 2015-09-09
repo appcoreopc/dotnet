@@ -5,11 +5,38 @@ using Microsoft.Owin.Security.Infrastructure;
 using Microsoft.Owin.Security.OAuth;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Web.Http;
+using System.Threading;
+using System.Net;
+using Microsoft.Owin.Security.Google;
+using Microsoft.Owin.Security.Facebook;
 
 namespace AngularJSAuthentication.API
 {
+    public class ChallengeResult : IHttpActionResult
+    {
+        public string LoginProvider { get; set; }
+        public HttpRequestMessage Request { get; set; }
+
+        public ChallengeResult(string loginProvider, ApiController controller)
+        {
+            LoginProvider = loginProvider;
+            Request = controller.Request;
+        }
+
+        public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
+        {
+            Request.GetOwinContext().Authentication.Challenge(LoginProvider);
+
+            HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.Unauthorized);
+            response.RequestMessage = Request;
+            return Task.FromResult(response);
+        }
+    }
+    
     public class SimpleAuthorizationServerProvider : OAuthAuthorizationServerProvider
     {
 
@@ -204,6 +231,33 @@ namespace AngularJSAuthentication.API
         public void Receive(AuthenticationTokenReceiveContext context)
         {
             throw new NotImplementedException();
+        }
+    }
+    public class GoogleAuthProvider : IGoogleOAuth2AuthenticationProvider
+    {
+        public void ApplyRedirect(GoogleOAuth2ApplyRedirectContext context)
+        {
+            context.Response.Redirect(context.RedirectUri);
+        }
+
+        public Task Authenticated(GoogleOAuth2AuthenticatedContext context)
+        {
+            context.Identity.AddClaim(new Claim("ExternalAccessToken", context.AccessToken));
+            return Task.FromResult<object>(null);
+        }
+
+        public Task ReturnEndpoint(GoogleOAuth2ReturnEndpointContext context)
+        {
+            return Task.FromResult<object>(null);
+        }
+    }
+
+    public class FacebookAuthProvider : FacebookAuthenticationProvider
+    {
+        public override Task Authenticated(FacebookAuthenticatedContext context)
+        {
+            context.Identity.AddClaim(new Claim("ExternalAccessToken", context.AccessToken));
+            return Task.FromResult<object>(null);
         }
     }
 }
