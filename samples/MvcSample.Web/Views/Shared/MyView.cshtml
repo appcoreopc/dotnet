@@ -51,8 +51,8 @@
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
     <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-    <h3 style="color: red">@ViewBag.TempData<br/>@TempData["tempData"]</h3>
-    File Upload Demo: <br/>
+    <h3 style="color: red">@ViewBag.TempData<br />@TempData["tempData"]</h3>
+    File Upload Demo: <br />
     <form action="Home/PostFile" method="post" enctype="multipart/form-data">
         <input type="file" name="files" id="file1" />
         <input type="file" name="files" id="file2" />
@@ -65,9 +65,9 @@
     <h3>Partial Async: @await Html.PartialAsync("HelloWorldPartial", Model)</h3>
     <h3>
         Render Partial Async (Custom model): @{ await RenderHelloWorldPartial(new User()
-                                                {
-                                                    Name="Bob"
-                                                });
+            {
+                Name = "Bob"
+            });
         }
     </h3>
 
@@ -175,7 +175,7 @@
                 </tr>
                 <tr>
                     <td>
-                        @Html.LabelFor(m => m.Address, htmlAttributes: new { @class="control-label col-md-2" })
+                        @Html.LabelFor(m => m.Address, htmlAttributes: new { @class = "control-label col-md-2" })
                     </td>
                     <td>
                         @Html.TextBoxFor(m => m.Address, htmlAttributes: new { @class = "form-control" })
@@ -212,202 +212,202 @@
             </table>
         }
         @{ Html.BeginForm(method: FormMethod.Post, htmlAttributes: new { someAttribute = "some value", }); }
-            @Html.Hidden("Anon.Id")
-            <table>
-                <tr>
-                    <td>
-                        @Html.Label("Anon.Name")
-                    </td>
-                    <td>
-                        @Html.TextBox("Anon.Name")
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        @Html.Label("Anon.Address.Street")
-                    </td>
-                    <td>
-                        @Html.TextBox("Anon.Address.Street", (object)ViewBag.Anon.Address.Street)
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        @Html.Label("Anon.Address.City")
-                    </td>
-                    <td>
-                        @Html.TextBox("Anon.Address.City", value: null, format: "{0} (3)")
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        @Html.Label("Anon.Address.State")
-                    </td>
-                    <td>
-                        @Html.TextBox("Anon.Address.State", value: null, htmlAttributes: new { @class = "form-control" })
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        @Html.Label("Anon.Address.Country")
-                    </td>
-                    <td>
-                        @Html.TextBox("Anon.Address.Country", value: null, format: "{0} (4)",
+        @Html.Hidden("Anon.Id")
+        <table>
+            <tr>
+                <td>
+                    @Html.Label("Anon.Name")
+                </td>
+                <td>
+                    @Html.TextBox("Anon.Name")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Anon.Address.Street")
+                </td>
+                <td>
+                    @Html.TextBox("Anon.Address.Street", (object)ViewBag.Anon.Address.Street)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Anon.Address.City")
+                </td>
+                <td>
+                    @Html.TextBox("Anon.Address.City", value: null, format: "{0} (3)")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Anon.Address.State")
+                </td>
+                <td>
+                    @Html.TextBox("Anon.Address.State", value: null, htmlAttributes: new { @class = "form-control" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Anon.Address.Country")
+                </td>
+                <td>
+                    @Html.TextBox("Anon.Address.Country", value: null, format: "{0} (4)",
                                           htmlAttributes: new { @class = "form-control" })
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="submit" value="Save" class="btn btn-default" style="margin-left: 10px" />
-                    </td>
-                    <td></td>
-                </tr>
-            </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Save" class="btn btn-default" style="margin-left: 10px" />
+                </td>
+                <td></td>
+            </tr>
+        </table>
         @{ Html.EndForm(); }
     </div>
     <div style="float: left; border: 5px solid lightgreen; margin: 5px; padding: 7px;">
         @using (Html.BeginForm(controllerName: "Home", actionName: "Edit", method: FormMethod.Post))
         {
-        <table>
-            <tr>
-                <td>
-                    @Html.Label("Name", "Display / Edit Name")
-                </td>
-                <td>
-                    '@Html.Display("Name")'
-                </td>
-                <td>
-                    @Html.Editor("Name")
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.Label("Dependent.Name", "Display / Edit Dependent.Name")
-                </td>
-                <td>
-                    '@Html.Display("Dependent.Name")'
-                </td>
-                <td>
-                    @Html.Editor("Dependent.Name")
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.Label("Alive", "Display / Edit Alive")
-                </td>
-                <td>
-                    '@Html.Display("Alive")'
-                </td>
-                <td>
-                    @Html.Editor("Alive")
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.Label("Dependent.Alive", "Display / Edit Dependent.Alive")
-                </td>
-                <td>
-                    '@Html.Display("Dependent.Alive")'
-                </td>
-                <td>
-                    @Html.Editor("Dependent.Alive")
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.Label("Age", "Display / Edit Age")
-                </td>
-                <td>
-                    '@Html.Display("Age")'
-                </td>
-                <td>
-                    @Html.Editor("Age")
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.Label("GPA", "Display / Edit GPA")
-                </td>
-                <td>
-                    '@Html.Display("GPA")'
-                </td>
-                <td>
-                    @Html.Editor("GPA")
-                </td>
-            </tr>
-        </table>
+            <table>
+                <tr>
+                    <td>
+                        @Html.Label("Name", "Display / Edit Name")
+                    </td>
+                    <td>
+                        '@Html.Display("Name")'
+                    </td>
+                    <td>
+                        @Html.Editor("Name")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Dependent.Name", "Display / Edit Dependent.Name")
+                    </td>
+                    <td>
+                        '@Html.Display("Dependent.Name")'
+                    </td>
+                    <td>
+                        @Html.Editor("Dependent.Name")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Alive", "Display / Edit Alive")
+                    </td>
+                    <td>
+                        '@Html.Display("Alive")'
+                    </td>
+                    <td>
+                        @Html.Editor("Alive")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Dependent.Alive", "Display / Edit Dependent.Alive")
+                    </td>
+                    <td>
+                        '@Html.Display("Dependent.Alive")'
+                    </td>
+                    <td>
+                        @Html.Editor("Dependent.Alive")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Age", "Display / Edit Age")
+                    </td>
+                    <td>
+                        '@Html.Display("Age")'
+                    </td>
+                    <td>
+                        @Html.Editor("Age")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("GPA", "Display / Edit GPA")
+                    </td>
+                    <td>
+                        '@Html.Display("GPA")'
+                    </td>
+                    <td>
+                        @Html.Editor("GPA")
+                    </td>
+                </tr>
+            </table>
         }
     </div>
     <div style="float: left; border: 5px dashed green; margin: 5px; padding: 7px;">
         @using (Html.BeginForm(controllerName: "Home", actionName: "Edit", method: FormMethod.Post))
         {
-        <table>
-            <tr>
-                <td>
-                    @Html.LabelFor(model => model.Name, "DisplayFor / EditFor Name")
-                </td>
-                <td>
-                    '@Html.DisplayFor(model => model.Name)'
-                </td>
-                <td>
-                    @Html.EditorFor(model => model.Name)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.LabelFor(model => model.Dependent.Name, "DisplayFor / EditFor Dependent.Name")
-                </td>
-                <td>
-                    '@Html.DisplayFor(model => model.Dependent.Name)'
-                </td>
-                <td>
-                    @Html.EditorFor(model => model.Dependent.Name)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.LabelFor(model => model.Alive, "DisplayFor / EditFor Alive")
-                </td>
-                <td>
-                    '@Html.DisplayFor(model => model.Alive)'
-                </td>
-                <td>
-                    @Html.EditorFor(model => model.Alive)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.LabelFor(model => model.Dependent.Alive, "DisplayFor / EditFor Dependent.Alive")
-                </td>
-                <td>
-                    '@Html.DisplayFor(model => model.Dependent.Alive)'
-                </td>
-                <td>
-                    @Html.EditorFor(model => model.Dependent.Alive)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.LabelFor(model => model.Age, "DisplayFor / EditFor Age")
-                </td>
-                <td>
-                    '@Html.DisplayFor(model => model.Age)'
-                </td>
-                <td>
-                    @Html.EditorFor(model => model.Age)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    @Html.LabelFor(model => model.GPA, "DisplayFor / EditFor GPA")
-                </td>
-                <td>
-                    '@Html.DisplayFor(model => model.GPA)'
-                </td>
-                <td>
-                    @Html.EditorFor(model => model.GPA)
-                </td>
-            </tr>
-        </table>
+            <table>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.Name, "DisplayFor / EditFor Name")
+                    </td>
+                    <td>
+                        '@Html.DisplayFor(model => model.Name)'
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.Name)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.Dependent.Name, "DisplayFor / EditFor Dependent.Name")
+                    </td>
+                    <td>
+                        '@Html.DisplayFor(model => model.Dependent.Name)'
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.Dependent.Name)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.Alive, "DisplayFor / EditFor Alive")
+                    </td>
+                    <td>
+                        '@Html.DisplayFor(model => model.Alive)'
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.Alive)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.Dependent.Alive, "DisplayFor / EditFor Dependent.Alive")
+                    </td>
+                    <td>
+                        '@Html.DisplayFor(model => model.Dependent.Alive)'
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.Dependent.Alive)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.Age, "DisplayFor / EditFor Age")
+                    </td>
+                    <td>
+                        '@Html.DisplayFor(model => model.Age)'
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.Age)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.GPA, "DisplayFor / EditFor GPA")
+                    </td>
+                    <td>
+                        '@Html.DisplayFor(model => model.GPA)'
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.GPA)
+                    </td>
+                </tr>
+            </table>
         }
     </div>
 
@@ -417,4 +417,25 @@
     <div style="float: left; border: 5px dotted darkgreen; margin: 5px; padding: 7px">
         @Html.EditorForModel()
     </div>
+    <input type="button" value="Send" id="ajaxBtn" />
 </div>
+
+<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $("#ajaxBtn").click(function (e) {
+            e.preventDefault();
+            var emplyee = { Employee : { Name: 'jeremy9909', Id: 222 }, Name: 'jeremy', Id: 11119 };
+            $.ajax({
+                type: "POST", dataType: "json",
+                data: emplyee,
+                url: "http://localhost:5001/Home/Smile",
+                success: function () {
+                    console.log('success!!');
+                }
+            });
+        });
+    });
+</script>

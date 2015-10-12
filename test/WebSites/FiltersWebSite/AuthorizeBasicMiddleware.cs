@@ -16,7 +16,7 @@ namespace FiltersWebSite
             IUrlEncoder encoder,
             string authScheme) : 
                 base(next, new BasicOptions { AuthenticationScheme = authScheme }, loggerFactory, 
-                     encoder, configureOptions: null)
+                     encoder)
         {
         }
 

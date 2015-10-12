@@ -23,6 +23,13 @@ namespace MvcSample.Web
             return View("MyView", CreateUser());
         }
 
+        [HttpPost]
+        public ActionResult Smile(Employee emp, string name, int id)
+        {
+            return new JsonResult("hello : jeremy"); 
+        }
+
+
         public IActionResult NullUser()
         {
             return View();
@@ -252,5 +259,12 @@ namespace MvcSample.Web
 
             return new SelectList(ages, dataValueField: "Age", dataTextField: "Display");
         }
+    }
+
+    public class Employee
+    {
+        public string Name { get; set; }
+        public int Id { get; set; }
+
     }
 }

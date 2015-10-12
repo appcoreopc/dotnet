@@ -24,7 +24,7 @@ namespace Microsoft.AspNet.Mvc.Actions
         }
         /// <inheritdoc />
         public virtual object Create([NotNull] ActionContext actionContext, [NotNull] Type controllerType)
-        {
+       {
             var serviceProvider = actionContext.HttpContext.RequestServices;
             return _typeActivatorCache.CreateInstance<object>(serviceProvider, controllerType);
         }
