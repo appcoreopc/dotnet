@@ -1,0 +1,10 @@
+D:\test\demo\C#\MessagingWithQueues\bin\Debug\Sender.exe.config
+D:\test\demo\C#\MessagingWithQueues\bin\Debug\Sender.exe
+D:\test\demo\C#\MessagingWithQueues\bin\Debug\Sender.pdb
+D:\test\demo\C#\MessagingWithQueues\bin\Debug\Microsoft.ServiceBus.dll
+D:\test\demo\C#\MessagingWithQueues\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+D:\test\demo\C#\MessagingWithQueues\bin\Debug\Microsoft.ServiceBus.xml
+D:\test\demo\C#\MessagingWithQueues\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+D:\test\demo\C#\MessagingWithQueues\obj\Debug\Sender.exe
+D:\test\demo\C#\MessagingWithQueues\obj\Debug\Sender.pdb
+D:\test\demo\C#\MessagingWithQueues\obj\Debug\MessagingWithQueues.csprojResolveAssemblyReference.cache
