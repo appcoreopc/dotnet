@@ -107,6 +107,39 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+<<<<<<< HEAD
+=======
+        public ActionResult Test()
+       {
+            var br = false;
+            var result = Task.Run(async () => { br = await TestBool(); });
+            result.Wait();
+            return Content(br.ToString());
+        }
+
+        public ActionResult Test2()
+        {
+            var t = TestBool2();
+            t.Wait();
+            var x = t.Result;
+            return Content(x.ToString());
+        }
+
+        private async Task<bool> TestBool()
+        {
+            await Task.Delay(5000);
+            return true; 
+        }
+
+        private async Task<bool> TestBool2()
+        {
+            await Task.Delay(5000).ConfigureAwait(false);
+            return true;
+        }
+
+
+
+>>>>>>> c231a868d8f751e4213de98ab1c480bb233cad14
         //
         // POST: /Manage/AddPhoneNumber
         [HttpPost]

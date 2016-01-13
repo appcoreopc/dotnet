@@ -53,3 +53,7 @@ D:\test\demo\C#\AzureBlobs\bin\Debug\zh-Hans\System.Spatial.resources.dll
 D:\test\demo\C#\AzureBlobs\bin\Debug\zh-Hant\System.Spatial.resources.dll
 D:\test\demo\C#\AzureBlobs\obj\Debug\DataBlobStorage.exe
 D:\test\demo\C#\AzureBlobs\obj\Debug\DataBlobStorage.pdb
+<<<<<<< HEAD
+=======
+D:\test\demo\C#\AzureBlobs\obj\Debug\AzureBlobs.csprojResolveAssemblyReference.cache
+>>>>>>> c231a868d8f751e4213de98ab1c480bb233cad14

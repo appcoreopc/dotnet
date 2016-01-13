@@ -52,3 +52,7 @@ D:\test\demo\C#\WebApplication1\bin\Microsoft.Owin.Security.Twitter.xml
 D:\test\demo\C#\WebApplication1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\test\demo\C#\WebApplication1\obj\Debug\WebApplication1.dll
 D:\test\demo\C#\WebApplication1\obj\Debug\WebApplication1.pdb
+<<<<<<< HEAD
+=======
+D:\test\demo\C#\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+>>>>>>> c231a868d8f751e4213de98ab1c480bb233cad14
